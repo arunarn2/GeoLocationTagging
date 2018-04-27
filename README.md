@@ -37,6 +37,7 @@ Implmentation of [Bag of Tricks for Efficient Text Classification](https://arxiv
 5. **HierarchicalWithAttention**    
     Implementation of [Hierarchical Attention Networks for Document Classification](https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf)  
       
+     ![HierarchicalWithAttention Model](HwithAtnn.JPG)     
     *Structure:*  
       i) Embedding  
       ii) Word Encoder: word level bi-directional GRU to get rich representation of words  
@@ -61,7 +62,8 @@ Implmentation of [Bag of Tricks for Efficient Text Classification](https://arxiv
     *Input Data:*  
     There are two kinds of three kinds of inputs:1)encoder inputs (a sentence),  2)decoder inputs(labels list with fixed length; 3)target labels, it is also a list of labels.     
     For example, labels is:"L1 L2 L3 L4", then decoder inputs will be:[_GO,L1,L2,L2,L3,_PAD]; target label will be:[L1,L2,L3,L3,_END,_PAD]. length is fixed to 6, any exceed labels will be trancated, will pad if label is not enough to fill.  
-  
+    ![Seq2SeqAttn Model](seq2seqAttention.JPG)  
+    
     *Attention Mechanism:*
     i) Transfer encoder input list and hidden state of decoder  
     ii) Calculate similiarity of hidden state with each encoder input, to get possibility distribution for each encoder input.    
