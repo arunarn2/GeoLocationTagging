@@ -2,6 +2,12 @@
 This repository contains the models for "Text-based Geolocation Prediction of Social Media Users with Neural Networks", IEEE BigData 2017
 https://ieeexplore.ieee.org/document/8257985/  
 
+## Dataset:
+For this project I am using the [CMU Geo-tagged dataset](https://www.amazon.com/clouddrive/share/kfl0TTPDkXuFqTZ17WJSnhXT0q6fGkTlOTOLZ9VVPNu/folder/jRda2ADlTYy9XhWB9RUNng?_encoding=UTF8&*Version*=1&*entries*=0&mgh=1)   
+  
+Implemented Geo-tagging as a classification task (output is 1 out of the 49 US States) and a regression task (Latitude/Longitude is predicted from the regression).  
+
+ 
 ## Models:
 1. **Text CNN**    
   Implementation of [Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181)  
