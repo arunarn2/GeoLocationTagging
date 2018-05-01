@@ -84,16 +84,17 @@ Implmentation of [Bag of Tricks for Efficient Text Classification](https://arxiv
     During testing, there is no label. so we should feed the output we get from previous timestamp, and continue the process util we reached "_END" TOKEN.
 
 
-8. **CNNWithAttn:**
+8. **CNNWithAttn:**  
+Implementation based on [Neural Relation Extraction with Selective Attention over Instances](http://nlp.csai.tsinghua.edu.cn/~lyk/publications/acl2016_nre.pdf)  
 
 ## Usage:
-1. Models are in
+1. Neural network models can be found in the models folder.
 
 
 ## Envionment:
-python 2.7
-Tensorflow 1.4.1
-Numpy
+python 2.7   
+Tensorflow 1.4.1  
+Numpy  
 
 ## Reference:  
 1. [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)  
