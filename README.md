@@ -96,18 +96,22 @@ Tensorflow 1.4.1
 Numpy
 
 ## Reference:  
-1.Bag of Tricks for Efficient Text Classification  
+1. [Bag of Tricks for Efficient Text Classification](https://arxiv.org/abs/1607.01759)  
 
-2.Convolutional Neural Networks for Sentence Classification    
+2. [Convolutional Neural Networks for Sentence Classification](http://www.aclweb.org/anthology/D14-1181)  
 
-3.A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification  
+3. [A Sensitivity Analysis of (and Practitioners' Guide to) Convolutional Neural Networks for Sentence Classification](https://arxiv.org/abs/1510.03820)  
 
-4.Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow, from www.wildml.com    
+4. [Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow](http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/)   
 
-5.Recurrent Convolutional Neural Network for Text Classification    
+5. [Recurrent Convolutional Neural Network for Text Classification](https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/download/9745/9552)      
 
-6.Hierarchical Attention Networks for Document Classification  
+6. [Hierarchical Attention Networks for Document Classification](http://www.cs.cmu.edu/~./hovy/papers/16HLT-hierarchical-attention-networks.pdf)    
 
-7.Neural Machine Translation by Jointly Learning to Align and Translate
+7. [Relation Classification via Convolutional Deep Neural Network](http://www.aclweb.org/anthology/C14-1220)   
+
+8. [ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs](https://arxiv.org/pdf/1512.05193.pdf)  
+
+9. [Neural Relation Extraction with Selective Attention over Instances](http://nlp.csai.tsinghua.edu.cn/~lyk/publications/acl2016_nre.pdf)  
 
 
