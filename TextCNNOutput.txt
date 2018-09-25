@@ -1,0 +1,284 @@
+arunarn2@timan107:~/geoDL-master$ python main.py -d datasets/cmu 
+Using TensorFlow backend.
+05/09/2018 07:39:40 AM 'pattern' package not found; tag filters are not available for English
+05/09/2018 07:39:40 AM dataset: cmu
+05/09/2018 07:39:40 AM loading dataset...
+05/09/2018 07:39:40 AM loading the dataset from datasets/cmu
+Using states
+05/09/2018 07:39:41 AM <data.SequenceVectorizer instance at 0x7feb1620c908>
+05/09/2018 07:39:52 AM SequenceVectorizer maxlen:5000, #words:306247, most common words:0
+05/09/2018 07:39:52 AM Fitting SequenceVectorizer in 1850 texts
+05/09/2018 07:39:53 AM Fitting SequenceVectorizer in 1857 texts
+05/09/2018 07:39:55 AM training    n_samples: 5529, n_features: 5000
+05/09/2018 07:39:55 AM development n_samples: 1850, n_features: 5000
+05/09/2018 07:39:55 AM test        n_samples: 1857, n_features: 5000
+('cache_path:', 'cache_vocabulary_label_pik/cnn2_word_vocabulary.pik', 'file_exists:', True)
+05/09/2018 07:39:57 AM cnn_model.vocab_size: 400002
+05/09/2018 07:39:57 AM Initializing model: TextCNN
+2018-05-09 07:39:57.789059: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-09 07:39:57.789082: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-09 07:39:57.789089: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-09 07:39:57.789095: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-09 07:39:57.789100: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2018-05-09 07:39:59.386526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: GeForce GTX 1080
+major: 6 minor: 1 memoryClockRate (GHz) 1.7335
+pciBusID 0000:89:00.0
+Total memory: 7.92GiB
+Free memory: 7.80GiB
+2018-05-09 07:39:59.386594: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2018-05-09 07:39:59.386604: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2018-05-09 07:39:59.386624: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1080, pci bus id: 0000:89:00.0)
+Initializing Variables
+('using pre-trained word emebedding.started.word2vec_model_path:', 'glove.6B.300d.word2vec.txt')
+05/09/2018 07:40:07 AM loading projection weights from glove.6B.300d.word2vec.txt
+05/09/2018 07:42:02 AM loaded (400001, 300) matrix from glove.6B.300d.word2vec.txt
+word_embedding_final (400002, 300) <type 'numpy.ndarray'>
+('word. exists embedding:', 390035, ' ; word not exist embedding:', 9966)
+using pre-trained word emebedding.ended...
+Feed data and Train
+Epoch 0	Counter 50	Train Loss:861.7655	Train Accuracy:0.1013
+2018-05-09 08:02:41.261958: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 8127 get requests, put_count=8114 evicted_count=1000 eviction_rate=0.123244 and unsatisfied allocation rate=0.136951
+2018-05-09 08:02:41.262021: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+Epoch 0	Counter 100	Train Loss:797.8489	Train Accuracy:0.1131
+Epoch 0	Counter 150	Train Loss:743.7137	Train Accuracy:0.1183
+Epoch 0	Counter 200	Train Loss:696.8898	Train Accuracy:0.1191
+Epoch 0	Counter 250	Train Loss:656.0397	Train Accuracy:0.1207
+Epoch 0	Counter 300	Train Loss:619.9990	Train Accuracy:0.1240
+05/09/2018 08:07:08 AM Incrementing epoch counter....
+05/09/2018 08:07:08 AM Evaluating on Dev set ....
+('Epoch: 0/1000', 'Dev Loss: 357.4695', 'Dev Acc: 0.2701')
+05/09/2018 08:07:24 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 1	Counter 50	Train Loss:344.0953	Train Accuracy:0.1787
+Epoch 1	Counter 100	Train Loss:325.5056	Train Accuracy:0.1787
+Epoch 1	Counter 150	Train Loss:308.3944	Train Accuracy:0.1825
+Epoch 1	Counter 200	Train Loss:292.3196	Train Accuracy:0.1800
+Epoch 1	Counter 250	Train Loss:277.5806	Train Accuracy:0.1800
+Epoch 1	Counter 300	Train Loss:264.1525	Train Accuracy:0.1800
+05/09/2018 08:13:13 AM Incrementing epoch counter....
+05/09/2018 08:13:13 AM Evaluating on Dev set ....
+('Epoch: 1/1000', 'Dev Loss: 167.4328', 'Dev Acc: 0.2668')
+05/09/2018 08:13:29 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 2	Counter 50	Train Loss:161.5408	Train Accuracy:0.1862
+Epoch 2	Counter 100	Train Loss:153.9044	Train Accuracy:0.2044
+Epoch 2	Counter 150	Train Loss:147.3445	Train Accuracy:0.2121
+Epoch 2	Counter 200	Train Loss:141.2592	Train Accuracy:0.2109
+Epoch 2	Counter 250	Train Loss:135.4428	Train Accuracy:0.2172
+Epoch 2	Counter 300	Train Loss:130.1140	Train Accuracy:0.2160
+05/09/2018 08:19:17 AM Incrementing epoch counter....
+05/09/2018 08:19:17 AM Evaluating on Dev set ....
+('Epoch: 2/1000', 'Dev Loss: 91.7091', 'Dev Acc: 0.2652')
+05/09/2018 08:19:33 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 3	Counter 50	Train Loss:87.1063	Train Accuracy:0.2550
+Epoch 3	Counter 100	Train Loss:83.7914	Train Accuracy:0.2512
+Epoch 3	Counter 150	Train Loss:80.7266	Train Accuracy:0.2537
+Epoch 3	Counter 200	Train Loss:77.7458	Train Accuracy:0.2631
+Epoch 3	Counter 250	Train Loss:74.9305	Train Accuracy:0.2657
+Epoch 3	Counter 300	Train Loss:72.3154	Train Accuracy:0.2658
+05/09/2018 08:25:23 AM Incrementing epoch counter....
+05/09/2018 08:25:23 AM Evaluating on Dev set ....
+('Epoch: 3/1000', 'Dev Loss: 52.8883', 'Dev Acc: 0.2739')
+05/09/2018 08:25:38 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 4	Counter 50	Train Loss:50.4643	Train Accuracy:0.3212
+Epoch 4	Counter 100	Train Loss:48.8807	Train Accuracy:0.3137
+Epoch 4	Counter 150	Train Loss:47.1641	Train Accuracy:0.3254
+Epoch 4	Counter 200	Train Loss:45.5545	Train Accuracy:0.3356
+Epoch 4	Counter 250	Train Loss:44.1347	Train Accuracy:0.3372
+Epoch 4	Counter 300	Train Loss:42.7594	Train Accuracy:0.3385
+05/09/2018 08:31:26 AM Incrementing epoch counter....
+05/09/2018 08:31:26 AM Evaluating on Dev set ....
+('Epoch: 4/1000', 'Dev Loss: 33.9275', 'Dev Acc: 0.2755')
+05/09/2018 08:31:41 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 5	Counter 50	Train Loss:31.3245	Train Accuracy:0.3825
+Epoch 5	Counter 100	Train Loss:30.4274	Train Accuracy:0.3912
+Epoch 5	Counter 150	Train Loss:29.5974	Train Accuracy:0.3987
+Epoch 5	Counter 200	Train Loss:28.7699	Train Accuracy:0.4056
+Epoch 5	Counter 250	Train Loss:27.9932	Train Accuracy:0.4105
+Epoch 5	Counter 300	Train Loss:27.2569	Train Accuracy:0.4123
+05/09/2018 08:37:30 AM Incrementing epoch counter....
+05/09/2018 08:37:30 AM Evaluating on Dev set ....
+('Epoch: 5/1000', 'Dev Loss: 23.6862', 'Dev Acc: 0.3011')
+05/09/2018 08:37:46 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 6	Counter 50	Train Loss:21.2248	Train Accuracy:0.4813
+Epoch 6	Counter 100	Train Loss:20.6991	Train Accuracy:0.4756
+Epoch 6	Counter 150	Train Loss:20.1745	Train Accuracy:0.4900
+Epoch 6	Counter 200	Train Loss:19.6606	Train Accuracy:0.4978
+Epoch 6	Counter 250	Train Loss:19.2032	Train Accuracy:0.5028
+Epoch 6	Counter 300	Train Loss:18.8123	Train Accuracy:0.5042
+05/09/2018 08:43:38 AM Incrementing epoch counter....
+05/09/2018 08:43:38 AM Evaluating on Dev set ....
+('Epoch: 6/1000', 'Dev Loss: 18.2555', 'Dev Acc: 0.2946')
+05/09/2018 08:43:53 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 7	Counter 50	Train Loss:15.3478	Train Accuracy:0.5475
+Epoch 7	Counter 100	Train Loss:15.0219	Train Accuracy:0.5706
+Epoch 7	Counter 150	Train Loss:14.6905	Train Accuracy:0.5833
+Epoch 7	Counter 200	Train Loss:14.3720	Train Accuracy:0.5953
+Epoch 7	Counter 250	Train Loss:14.1206	Train Accuracy:0.5982
+Epoch 7	Counter 300	Train Loss:13.8813	Train Accuracy:0.5994
+05/09/2018 08:49:42 AM Incrementing epoch counter....
+05/09/2018 08:49:42 AM Evaluating on Dev set ....
+('Epoch: 7/1000', 'Dev Loss: 15.3359', 'Dev Acc: 0.2891')
+05/09/2018 08:49:58 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 8	Counter 50	Train Loss:11.7214	Train Accuracy:0.6538
+Epoch 8	Counter 100	Train Loss:11.4869	Train Accuracy:0.6587
+Epoch 8	Counter 150	Train Loss:11.2787	Train Accuracy:0.6704
+Epoch 8	Counter 200	Train Loss:11.0998	Train Accuracy:0.6753
+Epoch 8	Counter 250	Train Loss:10.9373	Train Accuracy:0.6800
+Epoch 8	Counter 300	Train Loss:10.7834	Train Accuracy:0.6808
+05/09/2018 08:55:45 AM Incrementing epoch counter....
+05/09/2018 08:55:45 AM Evaluating on Dev set ....
+('Epoch: 8/1000', 'Dev Loss: 12.8588', 'Dev Acc: 0.2891')
+05/09/2018 08:56:01 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 9	Counter 50	Train Loss:9.3780	Train Accuracy:0.7288
+Epoch 9	Counter 100	Train Loss:9.2804	Train Accuracy:0.7262
+Epoch 9	Counter 150	Train Loss:9.1917	Train Accuracy:0.7183
+Epoch 9	Counter 200	Train Loss:9.0317	Train Accuracy:0.7284
+Epoch 9	Counter 250	Train Loss:8.9184	Train Accuracy:0.7282
+Epoch 9	Counter 300	Train Loss:8.8180	Train Accuracy:0.7294
+05/09/2018 09:02:03 AM Incrementing epoch counter....
+05/09/2018 09:02:03 AM Evaluating on Dev set ....
+('Epoch: 9/1000', 'Dev Loss: 12.2762', 'Dev Acc: 0.2957')
+05/09/2018 09:02:19 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 10	Counter 50	Train Loss:7.8468	Train Accuracy:0.7625
+Epoch 10	Counter 100	Train Loss:7.8181	Train Accuracy:0.7562
+Epoch 10	Counter 150	Train Loss:7.7016	Train Accuracy:0.7625
+Epoch 10	Counter 200	Train Loss:7.6012	Train Accuracy:0.7725
+Epoch 10	Counter 250	Train Loss:7.5069	Train Accuracy:0.7782
+Epoch 10	Counter 300	Train Loss:7.4261	Train Accuracy:0.7762
+05/09/2018 09:08:28 AM Incrementing epoch counter....
+05/09/2018 09:08:28 AM Evaluating on Dev set ....
+('Epoch: 10/1000', 'Dev Loss: 10.6359', 'Dev Acc: 0.3000')
+05/09/2018 09:08:44 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 11	Counter 50	Train Loss:6.7377	Train Accuracy:0.8025
+Epoch 11	Counter 100	Train Loss:6.6574	Train Accuracy:0.8006
+Epoch 11	Counter 150	Train Loss:6.5910	Train Accuracy:0.8021
+Epoch 11	Counter 200	Train Loss:6.5002	Train Accuracy:0.8109
+Epoch 11	Counter 250	Train Loss:6.4470	Train Accuracy:0.8083
+Epoch 11	Counter 300	Train Loss:6.3911	Train Accuracy:0.8106
+05/09/2018 09:14:57 AM Incrementing epoch counter....
+05/09/2018 09:14:57 AM Evaluating on Dev set ....
+('Epoch: 11/1000', 'Dev Loss: 9.3308', 'Dev Acc: 0.2913')
+05/09/2018 09:15:13 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 12	Counter 50	Train Loss:5.9412	Train Accuracy:0.8113
+Epoch 12	Counter 100	Train Loss:5.8378	Train Accuracy:0.8219
+Epoch 12	Counter 150	Train Loss:5.7924	Train Accuracy:0.8229
+Epoch 12	Counter 200	Train Loss:5.7468	Train Accuracy:0.8234
+Epoch 12	Counter 250	Train Loss:5.6863	Train Accuracy:0.8300
+Epoch 12	Counter 300	Train Loss:5.6415	Train Accuracy:0.8298
+05/09/2018 09:21:25 AM Incrementing epoch counter....
+05/09/2018 09:21:25 AM Evaluating on Dev set ....
+('Epoch: 12/1000', 'Dev Loss: 8.8373', 'Dev Acc: 0.3043')
+05/09/2018 09:21:41 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 13	Counter 50	Train Loss:5.1856	Train Accuracy:0.8550
+Epoch 13	Counter 100	Train Loss:5.1514	Train Accuracy:0.8581
+Epoch 13	Counter 150	Train Loss:5.1059	Train Accuracy:0.8617
+Epoch 13	Counter 200	Train Loss:5.0775	Train Accuracy:0.8616
+Epoch 13	Counter 250	Train Loss:5.0548	Train Accuracy:0.8595
+Epoch 13	Counter 300	Train Loss:5.0303	Train Accuracy:0.8573
+05/09/2018 09:27:54 AM Incrementing epoch counter....
+05/09/2018 09:27:54 AM Evaluating on Dev set ....
+('Epoch: 13/1000', 'Dev Loss: 8.1300', 'Dev Acc: 0.3011')
+05/09/2018 09:28:10 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 14	Counter 50	Train Loss:4.6299	Train Accuracy:0.8812
+Epoch 14	Counter 100	Train Loss:4.5942	Train Accuracy:0.8800
+Epoch 14	Counter 150	Train Loss:4.5873	Train Accuracy:0.8742
+Epoch 14	Counter 200	Train Loss:4.5577	Train Accuracy:0.8741
+Epoch 14	Counter 250	Train Loss:4.5384	Train Accuracy:0.8740
+Epoch 14	Counter 300	Train Loss:4.5145	Train Accuracy:0.8738
+05/09/2018 09:34:19 AM Incrementing epoch counter....
+05/09/2018 09:34:19 AM Evaluating on Dev set ....
+('Epoch: 14/1000', 'Dev Loss: 8.0041', 'Dev Acc: 0.3071')
+05/09/2018 09:34:34 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 15	Counter 50	Train Loss:4.2972	Train Accuracy:0.8700
+Epoch 15	Counter 100	Train Loss:4.2974	Train Accuracy:0.8688
+Epoch 15	Counter 150	Train Loss:4.2384	Train Accuracy:0.8821
+Epoch 15	Counter 200	Train Loss:4.2170	Train Accuracy:0.8838
+Epoch 15	Counter 250	Train Loss:4.1889	Train Accuracy:0.8838
+Epoch 15	Counter 300	Train Loss:4.1583	Train Accuracy:0.8869
+05/09/2018 09:40:47 AM Incrementing epoch counter....
+05/09/2018 09:40:47 AM Evaluating on Dev set ....
+('Epoch: 15/1000', 'Dev Loss: 8.0186', 'Dev Acc: 0.3011')
+Epoch 16	Counter 50	Train Loss:3.9636	Train Accuracy:0.8800
+Epoch 16	Counter 100	Train Loss:3.8942	Train Accuracy:0.8981
+Epoch 16	Counter 150	Train Loss:3.8902	Train Accuracy:0.8938
+Epoch 16	Counter 200	Train Loss:3.8639	Train Accuracy:0.8966
+Epoch 16	Counter 250	Train Loss:3.8455	Train Accuracy:0.8982
+Epoch 16	Counter 300	Train Loss:3.8279	Train Accuracy:0.8960
+05/09/2018 09:46:44 AM Incrementing epoch counter....
+05/09/2018 09:46:44 AM Evaluating on Dev set ....
+('Epoch: 16/1000', 'Dev Loss: 7.8671', 'Dev Acc: 0.2962')
+05/09/2018 09:46:59 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 17	Counter 50	Train Loss:3.6185	Train Accuracy:0.9150
+Epoch 17	Counter 100	Train Loss:3.5930	Train Accuracy:0.9231
+Epoch 17	Counter 150	Train Loss:3.5927	Train Accuracy:0.9154
+Epoch 17	Counter 200	Train Loss:3.5690	Train Accuracy:0.9175
+Epoch 17	Counter 250	Train Loss:3.5332	Train Accuracy:0.9227
+Epoch 17	Counter 300	Train Loss:3.5049	Train Accuracy:0.9246
+05/09/2018 09:53:08 AM Incrementing epoch counter....
+05/09/2018 09:53:08 AM Evaluating on Dev set ....
+('Epoch: 17/1000', 'Dev Loss: 7.1812', 'Dev Acc: 0.3038')
+05/09/2018 09:53:24 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 18	Counter 50	Train Loss:3.2291	Train Accuracy:0.9575
+Epoch 18	Counter 100	Train Loss:3.2085	Train Accuracy:0.9575
+Epoch 18	Counter 150	Train Loss:3.1907	Train Accuracy:0.9550
+Epoch 18	Counter 200	Train Loss:3.1820	Train Accuracy:0.9541
+Epoch 18	Counter 250	Train Loss:3.1606	Train Accuracy:0.9565
+Epoch 18	Counter 300	Train Loss:3.1466	Train Accuracy:0.9554
+05/09/2018 09:59:36 AM Incrementing epoch counter....
+05/09/2018 09:59:36 AM Evaluating on Dev set ....
+('Epoch: 18/1000', 'Dev Loss: 7.1425', 'Dev Acc: 0.3022')
+05/09/2018 09:59:51 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 19	Counter 50	Train Loss:3.0362	Train Accuracy:0.9513
+Epoch 19	Counter 100	Train Loss:3.0051	Train Accuracy:0.9544
+Epoch 19	Counter 150	Train Loss:2.9792	Train Accuracy:0.9558
+Epoch 19	Counter 200	Train Loss:2.9618	Train Accuracy:0.9572
+Epoch 19	Counter 250	Train Loss:2.9493	Train Accuracy:0.9563
+Epoch 19	Counter 300	Train Loss:2.9294	Train Accuracy:0.9585
+05/09/2018 10:06:02 AM Incrementing epoch counter....
+05/09/2018 10:06:02 AM Evaluating on Dev set ....
+('Epoch: 19/1000', 'Dev Loss: 6.7376', 'Dev Acc: 0.3043')
+05/09/2018 10:06:18 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 20	Counter 50	Train Loss:2.7851	Train Accuracy:0.9563
+Epoch 20	Counter 100	Train Loss:2.7944	Train Accuracy:0.9575
+Epoch 20	Counter 150	Train Loss:2.7804	Train Accuracy:0.9587
+Epoch 20	Counter 200	Train Loss:2.7623	Train Accuracy:0.9616
+Epoch 20	Counter 250	Train Loss:2.7468	Train Accuracy:0.9637
+Epoch 20	Counter 300	Train Loss:2.7358	Train Accuracy:0.9629
+05/09/2018 10:12:30 AM Incrementing epoch counter....
+05/09/2018 10:12:30 AM Evaluating on Dev set ....
+('Epoch: 20/1000', 'Dev Loss: 6.5246', 'Dev Acc: 0.3038')
+05/09/2018 10:12:46 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 21	Counter 50	Train Loss:2.6483	Train Accuracy:0.9625
+Epoch 21	Counter 100	Train Loss:2.6161	Train Accuracy:0.9675
+Epoch 21	Counter 150	Train Loss:2.6136	Train Accuracy:0.9663
+Epoch 21	Counter 200	Train Loss:2.6041	Train Accuracy:0.9656
+Epoch 21	Counter 250	Train Loss:2.5957	Train Accuracy:0.9650
+Epoch 21	Counter 300	Train Loss:2.5878	Train Accuracy:0.9646
+05/09/2018 10:18:45 AM Incrementing epoch counter....
+05/09/2018 10:18:45 AM Evaluating on Dev set ....
+('Epoch: 21/1000', 'Dev Loss: 6.3026', 'Dev Acc: 0.3016')
+05/09/2018 10:19:00 AM Saving model to checkpoint to ckpt_dir/model.ckpt
+Epoch 22	Counter 50	Train Loss:2.5229	Train Accuracy:0.9537
+Epoch 22	Counter 100	Train Loss:2.5263	Train Accuracy:0.9525
+Epoch 22	Counter 150	Train Loss:2.5150	Train Accuracy:0.9525
+Epoch 22	Counter 200	Train Loss:2.5121	Train Accuracy:0.9525
+Epoch 22	Counter 250	Train Loss:2.5021	Train Accuracy:0.9537
+Epoch 22	Counter 300	Train Loss:2.4887	Train Accuracy:0.9556
+05/09/2018 10:25:03 AM Incrementing epoch counter....
+05/09/2018 10:25:03 AM Evaluating on Dev set ....
+('Epoch: 22/1000', 'Dev Loss: 6.5623', 'Dev Acc: 0.3011')
+Epoch 23	Counter 50	Train Loss:2.3679	Train Accuracy:0.9712
+Epoch 23	Counter 100	Train Loss:2.3829	Train Accuracy:0.9644
+Epoch 23	Counter 150	Train Loss:2.3803	Train Accuracy:0.9637
+Epoch 23	Counter 200	Train Loss:2.3804	Train Accuracy:0.9606
+Epoch 23	Counter 250	Train Loss:2.3788	Train Accuracy:0.9585
+Epoch 23	Counter 300	Train Loss:2.3754	Train Accuracy:0.9571
+05/09/2018 10:30:55 AM Incrementing epoch counter....
+05/09/2018 10:30:55 AM Evaluating on Dev set ....
+('Epoch: 23/1000', 'Dev Loss: 7.1710', 'Dev Acc: 0.2935')
+Epoch 24	Counter 50	Train Loss:2.3293	Train Accuracy:0.9550
+Epoch 24	Counter 100	Train Loss:2.3144	Train Accuracy:0.9613
+Epoch 24	Counter 150	Train Loss:2.2987	Train Accuracy:0.9617
+Epoch 24	Counter 200	Train Loss:2.3022	Train Accuracy:0.9597
+Epoch 24	Counter 250	Train Loss:2.3003	Train Accuracy:0.9597
+
